@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=<1.0>">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: aqua;
+        }
+        .border{
+          
+            position: fixed;
+            border: 2px solid black;
+            box-shadow: 0px 0px 10px gray;
+            width: 250px;
+            height: 300px;
+            text-align: center;
+            top: 150px;
+            left: 630px;
+            background-color: rgb(190, 230, 186);
+        }
+        .gridbox {
+            position: fixed;
+            border: 2px solid black;
+            box-shadow: 0px 0px 10px gray;
+            width: 500px;
+            height: 300px;
+            text-align: center;
+            top: 150px;
+            left: 500px;
+            background-color: khaki;
+
+        }
+    </style>
+    <script>
+        function key(i) {
+
+            a = document.getElementById("cal");
+
+            switch (i) {
+                case 1:
+                    a.value += 1;
+                    break;
+                case 2:
+                    a.value += 2;
+                    break;
+                case 3:
+                    a.value += 3;
+                    break;
+                case 4:
+                    a.value += 4;
+                    break;
+                case 5:
+                    a.value += 5;
+                    break;
+                case 6:
+                    a.value += 6;
+                    break;
+                case 7:
+                    a.value += 7;
+                    break;
+                case 8:
+                    a.value += 8;
+                    break;
+                case 9:
+                    a.value += 9;
+                    break;
+                case 0:
+                    a.value += 0;
+                    break;
+                case ('+'):
+                    a.value += "+";
+                    break;
+                case ('-'):
+                    a.value += "-";
+                    break;
+                case ('*'):
+                    a.value += "*";
+                    break;
+                case ('/'):
+                    a.value += "/";
+                    break;
+                case ('AC'):
+                    a.value = " ";
+                    break;
+                case ('='):
+                    result = eval(a.value);
+                    a.value = result;
+                    break;
+                case ('√'):
+                    result = eval(Math.sqrt(a.value));
+                    a.value = result;
+                    break;
+                case ('log'):
+                    result = eval(Math.log10(a.value));
+                    a.value = result;
+                    break;
+                case ('1/x'):
+                    result = eval((1 / a.value));
+                    a.value = result;
+                    break;
+
+            }
+
+        }
+    </script>
+</head>
+
+<body>
+    <h1 style="text-align: center;"><em style="font-size: 50px;  ">Welcome! Welcome! Welcome</em></h1>
+   
+    <div class="gridbox">
+        <div class="border">
+        <h1>Calculator</h1>
+        <input type="text" name="Calculator1" id="cal" style="width: 200px;"><br><br>
+       
+        <button type="button" onclick="key(1)">1</button>
+        <button type="button" onclick="key(2)">2</button>
+        <button type="button" onclick="key(3)">3</button>
+        <button type="button" onclick="key(4)">4</button>
+        <button type="button" onclick="key('+')">+</button><br><br>
+        <button type="button" onclick="key(5)">5</button>
+        <button type="button" onclick="key(6)">6</button>
+        <button type="button" onclick="key(7)">7</button>
+        <button type="button" onclick="key(8)">8</button>
+        <button type="button" onclick="key('-')">-</button><br><br>
+        <button type="button" onclick="key(9)">9</button>
+        <button type="button" onclick="key(0)">0</button>
+        <button type="button" onclick="key('*')">*</button>
+        <button type="button" onclick="key('/')">/</button>
+        <button type="button" onclick="key('√')">√</button><br><br>
+        <button type="button" onclick="key('1/x')">1/X</button>
+        <button type="button" onclick="key('log')">log</button>
+        <button type="button" onclick="key('AC')">AC</button>
+        <button type="button" onclick="key('=')">=</button></div>
+    </div>
+</body>
+
+</html>
